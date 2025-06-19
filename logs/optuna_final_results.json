@@ -1,0 +1,97 @@
+{
+  "best_score": 0.056896710965511944,
+  "best_params": {
+    "xgb_n_estimators": 1194,
+    "xgb_max_depth": 3,
+    "xgb_learning_rate": 0.017018141642904865,
+    "xgb_subsample": 0.7135395632353666,
+    "xgb_colsample_bytree": 0.8905668218426512,
+    "xgb_reg_alpha": 0.018373230091092787,
+    "xgb_reg_lambda": 6.443248646233379e-08,
+    "lgb_n_estimators": 662,
+    "lgb_num_leaves": 96,
+    "lgb_learning_rate": 0.016722282888571336,
+    "lgb_feature_fraction": 0.9437719022642234,
+    "lgb_bagging_fraction": 0.7758565689931941,
+    "lgb_bagging_freq": 7,
+    "lgb_min_child_samples": 13,
+    "lgb_reg_alpha": 0.5721116697959057,
+    "lgb_reg_lambda": 3.202884203013204e-06,
+    "cb_iterations": 679,
+    "cb_depth": 3,
+    "cb_learning_rate": 0.08134567341400821,
+    "cb_l2_leaf_reg": 0.013178604325530556,
+    "cb_bootstrap_type": "Bernoulli",
+    "cb_subsample": 0.8440135581080573,
+    "nn_n_layers": 5,
+    "nn_hidden_size_0": 432,
+    "nn_hidden_size_1": 600,
+    "nn_hidden_size_2": 496,
+    "nn_hidden_size_3": 635,
+    "nn_hidden_size_4": 429,
+    "nn_dropout": 0.3406516889455895,
+    "nn_learning_rate": 0.00024069935409838896,
+    "nn_batch_size": 1024,
+    "nn_epochs": 92
+  },
+  "n_trials": 7,
+  "all_trial_results": [
+    {
+      "trial_number": 5,
+      "score": 0.056896710965511944,
+      "params": {
+        "xgboost": {
+          "n_estimators": 1194,
+          "max_depth": 3,
+          "learning_rate": 0.017018141642904865,
+          "subsample": 0.7135395632353666,
+          "colsample_bytree": 0.8905668218426512,
+          "reg_alpha": 0.018373230091092787,
+          "reg_lambda": 6.443248646233379e-08
+        },
+        "lightgbm": {
+          "n_estimators": 662,
+          "num_leaves": 96,
+          "learning_rate": 0.016722282888571336,
+          "feature_fraction": 0.9437719022642234,
+          "bagging_fraction": 0.7758565689931941,
+          "bagging_freq": 7,
+          "min_child_samples": 13,
+          "reg_alpha": 0.5721116697959057,
+          "reg_lambda": 3.202884203013204e-06
+        },
+        "catboost": {
+          "iterations": 679,
+          "depth": 3,
+          "learning_rate": 0.08134567341400821,
+          "l2_leaf_reg": 0.013178604325530556,
+          "bootstrap_type": "Bernoulli",
+          "subsample": 0.8440135581080573
+        },
+        "neural_net": {
+          "hidden_sizes": [
+            432,
+            600,
+            496,
+            635,
+            429
+          ],
+          "dropout": 0.3406516889455895,
+          "learning_rate": 0.00024069935409838896,
+          "batch_size": 1024,
+          "epochs": 92
+        }
+      },
+      "timestamp": "2025-06-19T15:48:51.801202",
+      "metrics": {
+        "correlation": 0.056896710965511944,
+        "sharpe": -0.0053944242978578175,
+        "max_drawdown": 0.0,
+        "mae": 0.2596502063904417,
+        "prediction_std": 0.05512933849616055
+      }
+    }
+  ],
+  "study_name": "numerai_ensemble",
+  "timestamp": "2025-06-19T15:51:23.619679"
+}

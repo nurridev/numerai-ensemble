@@ -268,13 +268,21 @@ class NumeraiEnsembleRunner:
             logger.info(f"Final Training Correlation: {train_corr:.4f}")
             logger.info(f"Final Validation Correlation: {val_corr:.4f}")
             
-            # Save predictions
-            predictions_df = pd.DataFrame({
-                'train_predictions': train_pred,
-                'train_targets': y_train,
-                'val_predictions': val_pred,
-                'val_targets': y_val
+            # Save predictions separately to avoid length issues
+            train_df = pd.DataFrame({
+                'predictions': train_pred,
+                'targets': y_train,
+                'dataset': 'train'
             })
+            
+            val_df = pd.DataFrame({
+                'predictions': val_pred,
+                'targets': y_val,
+                'dataset': 'validation'
+            })
+            
+            # Combine and save
+            predictions_df = pd.concat([train_df, val_df], ignore_index=True)
             
             pred_path = os.path.join(LOGS_DIR, "final_predictions.csv")
             predictions_df.to_csv(pred_path, index=False)

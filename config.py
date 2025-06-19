@@ -14,10 +14,9 @@ DATA_VERSION = "v5.0"  # Latest version
 # Model Configuration
 MODEL_CONFIGS = {
     "xgboost": {
-        "tree_method": "gpu_hist",
-        "gpu_id": 0,
-        "predictor": "gpu_predictor",
-        "n_estimators": 1000,
+        "tree_method": "hist",
+        "device": "cpu",
+        "n_estimators": 500,
         "max_depth": 6,
         "learning_rate": 0.01,
         "subsample": 0.8,
@@ -25,9 +24,7 @@ MODEL_CONFIGS = {
         "random_state": 42
     },
     "lightgbm": {
-        "device": "gpu",
-        "gpu_platform_id": 0,
-        "gpu_device_id": 0,
+        "device": "cpu",
         "boosting_type": "gbdt",
         "num_leaves": 31,
         "learning_rate": 0.01,
@@ -35,23 +32,23 @@ MODEL_CONFIGS = {
         "bagging_fraction": 0.8,
         "bagging_freq": 5,
         "verbose": -1,
-        "random_state": 42
+        "random_state": 42,
+        "n_estimators": 500
     },
     "catboost": {
-        "task_type": "GPU",
-        "devices": "0",
-        "iterations": 1000,
+        "task_type": "CPU",
+        "iterations": 500,
         "learning_rate": 0.01,
         "depth": 6,
         "random_seed": 42,
         "verbose": False
     },
     "neural_net": {
-        "hidden_sizes": [512, 256, 128],
+        "hidden_sizes": [256, 128, 64],
         "dropout": 0.3,
         "learning_rate": 0.001,
-        "batch_size": 1024,
-        "epochs": 100,
+        "batch_size": 512,
+        "epochs": 50,
         "patience": 10
     }
 }

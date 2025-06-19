@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "total_trials": 1,
+    "best_ensemble_score": 0.056896710965511944,
+    "mean_ensemble_score": 0.056896710965511944,
+    "std_ensemble_score": NaN,
+    "best_correlation": 0.09039161208956822,
+    "mean_correlation": 0.09039161208956822,
+    "best_sharpe_ratio": 0.00588920417020231,
+    "min_max_drawdown": 0.0,
+    "training_duration": "0:02:43.050151"
+  },
+  "model_performance": {
+    "xgboost": {
+      "best_score": 0.05120703986896075,
+      "mean_score": 0.05120703986896075,
+      "std_score": 0.0,
+      "final_score": 0.05120703986896075
+    },
+    "lightgbm": {
+      "best_score": 0.05405187541723634,
+      "mean_score": 0.05405187541723634,
+      "std_score": 0.0,
+      "final_score": 0.05405187541723634
+    },
+    "catboost": {
+      "best_score": 0.05234497408827099,
+      "mean_score": 0.05234497408827099,
+      "std_score": 0.0,
+      "final_score": 0.05234497408827099
+    },
+    "neural_net": {
+      "best_score": 0.05006910564965051,
+      "mean_score": 0.05006910564965051,
+      "std_score": 0.0,
+      "final_score": 0.05006910564965051
+    }
+  },
+  "trial_history": [
+    {
+      "trial_number": 5,
+      "timestamp": "2025-06-19T15:48:51.804843",
+      "ensemble_score": 0.056896710965511944,
+      "model_scores": {
+        "xgboost": 0.05120703986896075,
+        "lightgbm": 0.05405187541723634,
+        "catboost": 0.05234497408827099,
+        "neural_net": 0.05006910564965051
+      },
+      "correlation": 0.09039161208956822,
+      "mae": 0.3103280841289548,
+      "mse": 0.15428033443936318,
+      "rmse": 0.39278535415588395,
+      "prediction_std": 0.2850338551833501,
+      "target_std": 0.2937116178735964,
+      "sharpe_ratio": 0.00588920417020231,
+      "max_drawdown": 0.0
+    }
+  ],
+  "generated_at": "2025-06-19T15:51:28.546978"
+}

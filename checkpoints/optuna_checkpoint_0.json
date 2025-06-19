@@ -1,0 +1,62 @@
+{
+  "trial_number": 0,
+  "best_params": null,
+  "best_score": -Infinity,
+  "trial_results": [
+    {
+      "trial_number": 0,
+      "score": -0.006573652465957065,
+      "params": {
+        "xgboost": {
+          "n_estimators": 1476,
+          "max_depth": 3,
+          "learning_rate": 0.11351526685755631,
+          "subsample": 0.9908369651564857,
+          "colsample_bytree": 0.6508308600659244,
+          "reg_alpha": 4.726262098544242e-07,
+          "reg_lambda": 2.131174224350874e-07
+        },
+        "lightgbm": {
+          "n_estimators": 1050,
+          "num_leaves": 25,
+          "learning_rate": 0.034785064294764356,
+          "feature_fraction": 0.8896658439351193,
+          "bagging_fraction": 0.9461416653369086,
+          "bagging_freq": 10,
+          "min_child_samples": 23,
+          "reg_alpha": 0.004358321169500195,
+          "reg_lambda": 0.003643655133875388
+        },
+        "catboost": {
+          "iterations": 1931,
+          "depth": 9,
+          "learning_rate": 0.08729486440718962,
+          "l2_leaf_reg": 2.5603987542216147e-06,
+          "bootstrap_type": "Bernoulli",
+          "subsample": 0.650731283071468
+        },
+        "neural_net": {
+          "hidden_sizes": [
+            196,
+            480,
+            573,
+            322
+          ],
+          "dropout": 0.48094735564775315,
+          "learning_rate": 0.0012574796265342881,
+          "batch_size": 1024,
+          "epochs": 79
+        }
+      },
+      "timestamp": "2025-06-19T15:46:36.234800",
+      "metrics": {
+        "correlation": -0.006573652465957065,
+        "sharpe": 0.00676748059674214,
+        "max_drawdown": 0.0,
+        "mae": 0.2665892107902543,
+        "prediction_std": 0.06275582967242435
+      }
+    }
+  ],
+  "timestamp": "2025-06-19T15:46:36.235364"
+}
