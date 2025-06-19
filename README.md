@@ -18,10 +18,6 @@ A high-performance, GPU-accelerated ensemble system for the Numerai tournament u
 - 16GB+ RAM recommended
 - 50GB+ free disk space
 
-### Software
-- Python 3.8+
-- CUDA 11.8+
-- Git
 
 ## Installation
 
@@ -272,10 +268,6 @@ def create_custom_features(self, df):
 2. Create a feature branch
 3. Add tests for new functionality
 4. Submit a pull request
-
-## License
-
-[License information]
 
 ## Support
 
