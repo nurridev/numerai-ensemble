@@ -9,6 +9,7 @@ A high-performance, GPU-accelerated ensemble system for the Numerai tournament u
 - **Real-time Metrics**: Live performance tracking with interactive dashboards
 - **Ensemble Methods**: Weighted averaging with dynamic weight optimization
 - **Data Pipeline**: Automated Numerai data download and preprocessing
+- **Comprehensive Backtesting**: Detailed model evaluation with era analysis and visualizations
 - **Robust Architecture**: Graceful error handling and checkpoint saving
 
 ## Requirements
@@ -71,6 +72,83 @@ Resume from existing study:
 ```bash
 python main_runner.py --resume
 ```
+
+## 📊 Model Backtesting
+
+After training your models, comprehensive backtesting is available to evaluate performance:
+
+### Quick Backtesting
+
+```bash
+# Run comprehensive backtesting with era analysis
+python backtest_model.py --era-analysis --save-predictions
+
+# Basic backtesting without era breakdown
+python backtest_model.py --save-predictions
+
+# Custom paths and output directory
+python backtest_model.py \
+  --model-path models/my_model.pkl \
+  --data-path data/my_validation.parquet \
+  --output-dir my_results
+```
+
+### Demo Examples
+
+```bash
+# Run interactive demos showing different backtesting modes
+python demo_backtest.py
+```
+
+### Backtesting Features
+
+- **📈 Performance Metrics**: Correlation, Sharpe ratio, feature neutrality, drawdown analysis
+- **📊 Era Analysis**: Detailed era-by-era performance breakdown and stability metrics
+- **📉 Visualizations**: Scatter plots, distributions, cumulative performance, ensemble weights
+- **💾 Export Options**: CSV predictions, JSON metrics, PNG plots
+
+### Typical Backtesting Output
+
+```
+============================================================
+BACKTESTING SUMMARY
+============================================================
+Model: models/best_ensemble_model.pkl
+Data: data/validation.parquet
+Samples: 50,000
+
+Performance Metrics:
+  Correlation: 0.0234
+  Rank Correlation: 0.0189
+  Feature Neutral Correlation: 0.0156
+  Sharpe Ratio: 1.234
+  Max Drawdown: -0.0891
+
+Era Analysis:
+  Mean Era Correlation: 0.0198
+  Era Correlation Std: 0.1456
+  Era Sharpe: 0.789
+
+Results saved to: backtest_results/
+============================================================
+```
+
+### Generated Outputs
+
+```
+backtest_results/
+├── predictions.csv              # Detailed predictions with residuals
+├── metrics.json                 # Comprehensive performance metrics
+├── era_analysis.csv            # Era-by-era performance breakdown
+└── figures/
+    ├── prediction_scatter.png       # Prediction vs target scatter
+    ├── prediction_distribution.png  # Distribution comparison
+    ├── era_analysis.png            # Era performance visualization
+    ├── cumulative_performance.png  # Equity curve with drawdown
+    └── ensemble_weights.png        # Model contribution analysis
+```
+
+For detailed backtesting documentation, see [`BACKTESTING.md`](BACKTESTING.md).
 
 ## Configuration
 
